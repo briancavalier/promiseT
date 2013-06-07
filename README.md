@@ -1,6 +1,6 @@
 # promiseT Monad Transformer
 
-Instead of creating a promise monad or merging the promise and monad interfaces into a larger, more confusing interface, I created a promiseT *monad transformer*, along the lines of the Haskell stateT monad transformer.  Haskell does not have *a* State monad, but rather uses stateT to add stateful behavior to any other monad.  For example, the monad returned by the `state` function is actually `stateT` applied to the identity monad.
+Instead of creating a promise monad or merging the promise and monad interfaces into a larger, more confusing interface, I created a promiseT *monad transformer*, along the lines of the [Haskell stateT monad transformer](http://en.wikibooks.org/wiki/Haskell/Monad_transformers#The_State_transformer).  Haskell does not have *a* State monad, but rather uses stateT to add stateful behavior to any other monad.  For example, the monad returned by the `state` function is actually `stateT` applied to the identity monad.
 
 The [examples](examples) apply promiseT to a Javascript Array (which is not a Monad, but Array.prototype.map is a Functor, so we can work with that) and a simple Identity monad, yielding new promise-aware types in each case.  These new types *are not* promises.  They don't have `then`, but they can operate on promise values and their functor, applicative, and chain accept functions that deal with promises.
 
