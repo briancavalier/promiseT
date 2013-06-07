@@ -2,9 +2,9 @@
 
 Instead of creating a promise monad or merging the promise and monad interfaces into a larger, more confusing interface, I created a promiseT *monad transformer*, along the lines of the Haskell stateT monad transformer.  Haskell does not have *a* State monad, but rather uses stateT to add stateful behavior to any other monad.  For example, the monad returned by the `state` function is actually `stateT` applied to the identity monad.
 
-The examples apply promiseT to a Javascript Array (which is not a Monad, but Array.prototype.map is a Functor, so we can work with that) and a simple Identity monad, yielding new promise-aware types in each case.  These new types *are not* promises.  They don't have `then`, but they can operate on promise values and their functor, applicative, and chain accept functions that deal with promises.
+The [examples](examples) apply promiseT to a Javascript Array (which is not a Monad, but Array.prototype.map is a Functor, so we can work with that) and a simple Identity monad, yielding new promise-aware types in each case.  These new types *are not* promises.  They don't have `then`, but they can operate on promise values and their functor, applicative, and chain accept functions that deal with promises.
 
-Both the Identity monad and it's `promiseT`-ified version obey the functor, applicative, chain, and monad laws, as they are stated in [fantasy-land](https://github.com/puffnfresh/fantasy-land).
+Both the Identity monad and it's `promiseT`-ified version [obey the functor, applicative, chain, and monad laws](examples/laws.js), as they are stated in [fantasy-land](https://github.com/puffnfresh/fantasy-land).
 
 `promiseT` is independent of any particular promise implementation.  It relies only on the [Promises/A+](http://promises-aplus.github.io/promises-spec/) `then` API.  The examples here use [when.js](https://github.com/cujojs/when), but [my original gist version](https://gist.github.com/briancavalier/3d3fc0c08d51aeaed5c0) used [avow](https://github.com/briancavalier/avow). Switching required no changes to `promiseT`
 
