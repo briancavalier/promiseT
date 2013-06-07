@@ -27,10 +27,11 @@ pa.map(log);
 
 // Let's lift it and make it understand promises
 // Now pa is a list that knows how to deal with the fact
-// that it's elements are promises
+// that its elements are promises
 pa = PA.lift(pa);
 
 // Now log it. Yay, it logs values!
+// logs: 1, 2, 3
 pa.map(log);
 
 // Let's see what else works
