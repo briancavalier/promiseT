@@ -20,3 +20,5 @@ There is currently a gap between the Promise and Monad communities, and I've bee
 3. `node examples/list.js` - lifts Javascript `Array` to be promise-aware and does some gymnastics with it.
 4. `node examples/errors.js` - shows how error handling might work in a way that is similar to Haskell's `Either`/`catchError`/`throwError` error handling approach.
 
+---
+Copyright &copy; 2013 Brian Cavalier, MIT License
