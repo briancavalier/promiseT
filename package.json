@@ -1,0 +1,38 @@
+{
+    "name": "promiseT",
+    "version": "0.1.0",
+	"description": "promiseT Monad Transform adds promised asynchrony to any Monad",
+	"keywords": ["Monad", "Functor", "Applicative", "Promises/A+", "promises-aplus", "promise", "promises", "async", "asynchronous"],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://www.opensource.org/licenses/mit-license.php"
+		}
+	],
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/briancavalier/promiseT"
+		}
+	],
+	"bugs": "https://github.com/briancavalier/promiseT/issues",
+	"maintainers": [
+		{
+			"name": "Brian Cavalier",
+			"web": "http://hovercraftstudios.com"
+		}
+	],
+	"contributors": [
+		{
+			"name": "Brian Cavalier",
+			"web": "http://hovercraftstudios.com"
+		}
+	],
+	"devDependencies": {
+		"when": "~2"
+	},
+	"main": "promiseT",
+	"scripts": {
+		"test": "node examples/laws.js"
+	}
+}
