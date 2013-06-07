@@ -10,7 +10,7 @@ Both the Identity monad and it's `promiseT`-ified version [obey the functor, app
 
 ## Why?
 
-There is currently a gap between the Promise and Monad communities, and I've been thinking about ways to bridge that.  The two concepts powerful and elegant, and I think it would be awesome for them to work together, and for the communities to converge.
+There is currently a gap between the Promise and Monad communities, and I've been thinking about ways to bridge that.  The two concepts are powerful and elegant, and I think it would be awesome for them to work together, and for the communities to converge.
 
 ## Running examples
 
