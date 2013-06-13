@@ -140,16 +140,6 @@ function addOnePM(PM) {
 	};
 }
 
-function log(x) {
-	console.log(x);
-	return x;
-}
-
-function logError(e) {
-	console.error('ERROR', e);
-	throw e;
-}
-
 function fcompare(msg, functor1, functor2) {
 	functor1.map(function(x) {
 		functor2.map(function(y) {
